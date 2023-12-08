@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detailes</title>
+</head>
+<body>
+
+    <p>{{ student.name }}</p>
+    <p>{{ student.surname }}</p>
+    <p>{{ student.age }}</p>
+    <p>{{ student.course }}</p>
+    <p>{{ student.instrument }}</p>
+    <p>{{ student.average_grade }}</p>
+    <p>{{ student.payment }}</p>
+ <a href="{% url 'update' student.id %}">Update</a>
+
+
+</form>
+
+</body>
+</html>

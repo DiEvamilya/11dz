@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<h1>{{ student.name }}</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="name"> Name </label>
+        <input type="text" name="name" value="{{ student.name }}"><br>
+
+        <label for="surname"> Surname </label>
+        <input type="text" name="surname" value="{{ student.surname }}"><br>
+
+        <label for="age"> Age </label>
+        <input type="number" name="age" value="{{ student.age}}"><br>
+
+        <label for="course"> Course </label>
+        <input type="number" name="course" value="{{ student.course }}"><br>
+
+        <label for="my-input"> Instrument: </label>
+        <input type="text" id="my-input" name="my-input" list="my-list" value="{{ student.instrument }}" ><br>
+                <datalist id="my-list">
+                  <option value="Piano">
+                  <option value="Violin">
+                  <option value="Flute">
+                  <option value="Accordion">
+                  <option value="The Harp">
+                </datalist>
+        <label for="average_grade"> Average_grade </label>
+        <input type="number" name="average_grade" value="{{ student.average_grade }}"><br>
+
+        <label for="payment"> Payment </label>
+        <input type="checkbox" name="payment" value="{{ student.payment }}"><br>
+
+        <input type="submit" value="Update"><br>
+
+    </form>
+
+<a href="{% url 'detail' student.slug  %}"> Detail </a>
+</body>
+</html>
+
+

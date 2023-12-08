@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'student_list' %}">  List </a>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name"> Name </label>
+        <input type="text" name="name"> <br>
+
+        <label for="surname"> Surname </label>
+        <input type="text" name="surname"><br>
+
+        <label for="age"> Age </label>
+        <input type="number" name="age"><br>
+
+        <label for="course"> Course </label>
+        <input type="number" name="course"><br>
+
+        <label for="my-input">Instrument:</label>
+        <input type="text" id="my-input" name="my-input" list="my-list">
+            <datalist id="my-list">
+              <option value="Piano">
+              <option value="Violin">
+              <option value="Flute">
+              <option value="Accordion">
+              <option value="The Harp">
+            </datalist>
+<br>
+        <label for="average_grade"> Average Grade </label>
+        <input type="number" name="average_grade"><br>
+
+
+        <input type="submit" value="Create"><br>
+
+    </form>
+</body>
+</html>
+
